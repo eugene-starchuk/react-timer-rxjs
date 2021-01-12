@@ -25,6 +25,7 @@ let App = () => {
   });
   const resetStream$ = new Observable((observer) => {
     observer.next(clearInterval(interv));
+    observer.next(setStatus(0));
     observer.next(setTime({ ms: 0, s: 0, m: 0, h: 0 }));
   });
 
